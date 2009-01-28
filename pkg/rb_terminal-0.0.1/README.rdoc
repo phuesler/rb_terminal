@@ -1,0 +1,15 @@
+= Rb Terminal
+A simple wrapper to create several terminal tabs on OSX and run commands on them. For instance, you can use it to the usual tabs for a rails project.
+
+  #!/usr/bin/env ruby
+  require 'rb_terminal'
+
+  project_dir = "~/work/rails/awesomeapp"
+  RbTerminal::Terminal.new("cd #{project_dir} && git status") do |term|
+    term.tab("cd #{project_dir} && tail -f -n 100 log/development.log")
+    term.tab("cd #{project_dir} && script/console")
+    term.tab("cd #{project_dir} && script/server")  
+  end
+
+== Install
+  gem install  phusler-rb_terminal --source http://gems.github.com
