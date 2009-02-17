@@ -9,4 +9,5 @@ Echoe.new('rb_terminal', '0.0.1') do |p|
   p.email                         = "patrick.huesler@gmail.com"
   p.ignore_pattern                = ["tmp/*"]
   p.development_dependencies      = []
+  p.runtime_dependencies          = ["rb-appscript >= 0.5.1"]
 end
