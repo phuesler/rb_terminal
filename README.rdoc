@@ -13,3 +13,9 @@ A simple wrapper to create several terminal tabs on OSX and run commands on them
 
 == Install
   gem install  phusler-rb_terminal --source http://gems.github.com
+  
+There is an issue with the runtime dependencies. The dependency rb-appscript might
+not get installed, so you have to do it manually
+
+  gem install rb-appscript
+  
